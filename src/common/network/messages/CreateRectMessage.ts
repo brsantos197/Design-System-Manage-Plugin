@@ -1,17 +1,18 @@
 import { NetworkSide } from "@common/network/sides";
-import * as Networker from "monorepo-networker";
+//@ts-ignore
+import * as monorepoNetworker from "monorepo-networker";
 
 interface Payload {
   width: number;
   height: number;
 }
 
-export class CreateRectMessage extends Networker.MessageType<Payload> {
-  public receivingSide(): Networker.Side {
+export class CreateRectMessage extends monorepoNetworker.MessageType<Payload> {
+  public receivingSide(): monorepoNetworker.Side {
     return NetworkSide.PLUGIN;
   }
 
-  public handle(payload: Payload, from: Networker.Side): void {
+  public handle(payload: Payload, from: monorepoNetworker.Side): void {
     if (figma.editorType === "figma") {
       const rect = figma.createRectangle();
       rect.x = 0;
