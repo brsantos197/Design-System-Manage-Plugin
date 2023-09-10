@@ -23,11 +23,6 @@ export default defineConfig({
       },
     },
   },
-  css: {
-    postcss: {
-      plugins: [postcssUrl({ url: "inline" })],
-    },
-  },
   resolve: {
     alias: {
       "@common": path.resolve(__dirname, "./src/common"),

@@ -3,7 +3,7 @@ import * as Networker from "monorepo-networker";
 import { NetworkMessages } from "@common/network/messages";
 
 import { Button } from "@ui/components/Button";
-import "@ui/styles/main.scss";
+import "@ui/styles/main.css";
 import { Tokens } from "src/@types/tokens";
 
 function App() {
